@@ -108,7 +108,7 @@ bool same_ratio(VerificationKey<G1> const &g1_key, VerificationKey<G2> const &g2
 // We want to construct two sequences
 // 1: A = x.z + x^2.z^2 + ... + x^(n-1).z^(n-1)
 // 2: B = x^2.z + ... + x^n.z^(n-1)
-// Because every term is multiplied by an independant random variable, we can treat each term as distinct.
+// Because every term is multiplied by an independent random variable, we can treat each term as distinct.
 // Once we have A and B, we can validate that A*x = B via a pairing check.
 // This validates that our original vector represents the powering sequence that we desire
 bool validate_polynomial_evaluation(std::vector<G1> const &evaluation, G2 const &comparator)
